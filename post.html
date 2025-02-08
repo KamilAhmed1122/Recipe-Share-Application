@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Blog | Submit Recipe</title>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="mainnav">
+        <div class="container flex">
+            <div class="logo flex">
+                <img src="img/logo.png" alt="">
+                <h1>Recipe Blog</h1>
+            </div>
+            <ul class="nav-list flex">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Categories</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">Recipes</a></li>
+                <li><a href="/">Pages</a></li>
+                <li><a href="/">Registration</a></li>
+            </ul>
+            <div class="searchbar flex">
+                <input type="checkbox" name="check-toggle" id="checkbox" hidden="">
+                <label for="checkbox" class="toggle">
+                    <div class="toggle_circle"></div>
+                </label>
+                <i class="fa-solid fa-magnifying-glass" id="searchopen"></i>
+                <div class="navonoff">
+                    <input type="checkbox"  id="checkbox2">
+                    <label for="checkbox2" class="toggle2">
+                        <div class="bar bar-top"></div>
+                        <div class="bar bar-middle"></div>
+                        <div class="bar bar-bottom"></div>
+                    </label>
+                </div>
+            </div>
+             <div id="searchbar" class="searchinput">
+                <input type="text" placeholder="Search Here...">
+                <i class="fa-solid fa-xmark" id="removesearch"></i>
+             </div>
+        </div>
+    </div>
+    <div class="post-container">
+        <h2>Submit Your Recipe</h2>
+        <form id="recipeForm">
+            <input type="text" id="title" placeholder="Recipe Title" required>
+            <textarea id="description" placeholder="Recipe Description" required></textarea>
+            <input type="file" id="recipeImage" accept="image/*">
+            <button type="submit">Post Recipe</button>
+        </form>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <!-- <script type="module" src="js/config.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/darkmode.js"></script>
+    <!-- <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/post.js"></script> -->
+</body>
+</html>
+
